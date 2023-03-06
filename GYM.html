@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gym Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        img {
+            width: 130px;
+            height: 80px;
+            border-radius: 30px;
+        }
+
+        header {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 95rem;
+            height: 5rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav li {
+            float: right;
+            margin: 0 2rem;
+        }
+
+        nav a {
+            font-size: 1.2rem;
+            color: white;
+            padding: 6px;
+            text-decoration: none;
+        }
+
+        nav li a:hover,
+        nav li a.active {
+            text-decoration: underline;
+            color: white;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 95rem;
+            background-color: black;
+            z-index: -1;
+            background: url(FootarBack.png) no-repeat center center/cover;
+            opacity: 0.8;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            padding: 4px;
+        }
+
+        #Home {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: url(gymBcakground.jpg) no-repeat center center/cover;
+            height: 760px;
+            width: 95rem;
+        }
+
+        #Home h2 {
+            padding: 17px 300px;
+            border-radius: 40px;
+            background-color: black;
+        }
+
+        #Home p {
+            padding: 17px 200px;
+            border-radius: 40px;
+            background-color: black;
+            text-align: center;
+        }
+
+        #Classes {
+            width: 95rem;
+            height: 500px;
+            background-color: black;
+            z-index: -1;
+            opacity: 0.9;
+        }
+
+        #Classes ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #Classes ul li {
+            box-shadow: 4px 0 4px 3px paleturquoise;
+            margin: 40px 90px;
+            width: 150px;
+            height: 150px;
+            padding: 16px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .class-1 {
+            background: url(YOGA.jpg) no-repeat center center/cover;
+        }
+
+        .class-2 {
+            background: url(ZUMBA.jpg) no-repeat center center/cover;
+        }
+
+        .class-3 {
+            background: url(SPIN.jpg) no-repeat center center/cover;
+        }
+
+        .class-4 {
+            background: url(HLIT.jpg) no-repeat center center/cover;
+        }
+
+        #pics:hover {
+            transform: scale(150%);
+
+        }
+
+
+        #Pricing {
+            background-color: black;
+            opacity: 1;
+            width: 95rem;
+            height: 500px;
+            background: url(InfoBack.png) no-repeat center center/cover;
+        }
+
+        #Pricing ul {
+            display: flex;
+            list-style: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 2px;
+        }
+
+        #Pricing ul li {
+            font-size: 1.3rem;
+            margin: 10px;
+            padding: 6px;
+            border-radius: 30px;
+        }
+
+        #Pricing ul li:hover {
+            transform: scale(120%);
+        }
+
+        #Pricing ul li:hover {
+            cursor: pointer;
+            background-color: darkslategrey;
+        }
+
+        #About {
+            margin-top: 20px;
+            width: 95rem;
+            height: 500px;
+        }
+
+        #Contact {
+            background-color: black;
+            opacity: 1;
+            margin-top: 20px;
+            width: 95rem;
+            height: 500px;
+            display: block;
+        }
+
+        p {
+            font-size: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+
+        .datain {
+            width: 20rem;
+            margin: 4px auto;
+            padding: 6px;
+
+        }
+
+        button {
+            display: block;
+            width: 20rem;
+            margin: auto;
+            font-size: 1rem;
+            border-radius: 30px;
+            border: 2px solid aquamarine;
+
+        }
+
+        button:hover {
+            cursor: pointer;
+            border: 2px solid white;
+            background-color: black;
+            color: white;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            width: 95rem;
+            background-color: darkslategray;
+            height: 53px;
+        }
+
+        @media (min-width: 375px) and (max-width: 667px) {
+            header {
+                width: 1510px;
+                height: 5rem;
+            }
+
+            footer {
+                width: 1510px;
+                height: 50px;
+            }
+
+            main {
+                width: 1510px;
+                background-color: black;
+            }
+
+            #Home {
+                width: 1510px;
+            }
+
+
+        }
+
+        @media (max-width: 896px) {
+            main {
+                width: 1502px;
+                height: 2648px;
+            }
+
+            footer {
+                width: 1502px;
+            }
+
+            #Contact {
+                width: 1502px;
+            }
+
+            #Classes {
+                width: 1502px;
+            }
+
+            #Pricing {
+                width: 1502px;
+            }
+
+            header {
+                width: 1502px;
+            }
+
+            #Home {
+                width: 1502px;
+            }
+
+            #About {
+                width: 1502px;
+            }
+
+        }
+
+        @media (max-width: 1180px) {
+            main {
+                width: 1502px;
+                height: 2650px;
+            }
+        }
+
+        @media (max-width: 1368px) {
+            main {
+                width: 1502px;
+                height: 2650px;
+            }
+
+            footer {
+                width: 1502px;
+            }
+
+            #Contact {
+                width: 1502px;
+            }
+
+            #Classes {
+                width: 1502px;
+            }
+
+            #Pricing {
+                width: 1502px;
+            }
+
+            header {
+                width: 1502px;
+            }
+
+            #Home {
+                width: 1502px;
+            }
+
+            #About {
+                width: 1502px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <img src="GymLogo.png" alt="GymLogo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Classes">Classes</a></li>
+                <li><a href="#Pricing">Pricing</a></li>
+                <li><a href="#About">About Us</a></li>
+                <li><a href="#Contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Home">
+        <h2>Welcome to our gym!</h2>
+        <p>Our gym offers a variety of classes and equipment to help you achieve your fitness goals.</p>
+    </section>
+    <main>
+        <section id="Classes">
+            <h2>Classes</h2>
+            <ul>
+                <li class="class-1" id="pics">Yoga</li>
+                <li class="class-2" id="pics">Zumba</li>
+                <li class="class-3" id="pics">Spin</li>
+                <li class="class-4" id="pics">HIIT</li>
+            </ul>
+        </section>
+        <section id="Pricing">
+            <h2>Pricing</h2>
+            <p>Our membership plans are affordable and flexible to fit your needs.</p>
+            <ul>
+                <li>Basic: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $30/month</li>
+                <li>Standard: &nbsp;&nbsp; $50/month</li>
+                <li>Premium: &nbsp;&nbsp; $80/month</li>
+            </ul>
+        </section>
+        <section id="About">
+            <h2>About Us</h2>
+            <p>We are a team of fitness professionals dedicated to helping our clients achieve their fitness goals.</p>
+        </section>
+        <section id="Contact">
+            <h2>Contact Us</h2>
+            <p>Feel free to contact us with any questions or comments.</p>
+            <form>
+                <div class="datain">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="datain">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <button type="submit">Send</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Gym Website</p>
+    </footer>
+</body>
+
+</html>
